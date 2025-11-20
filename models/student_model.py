@@ -5,7 +5,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
 # 1) Load data
-df = pd.read_csv("students.csv")
+# adjusted to new data folder
+df = pd.read_csv("data/students.csv")
 
 # 2) Replace "?" with NaN
 df.replace("?", np.nan, inplace=True)

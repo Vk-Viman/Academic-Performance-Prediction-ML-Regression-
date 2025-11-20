@@ -48,17 +48,3 @@ Attendance,StudyHours,Marks,ParentEdu,Absences,FamilyIncome,PreviousScore,TestPr
 47,3,42,NoEdu,8,15000,40,no,41,0
 73,4,65,Bachelor,3,31000,63,yes,67,1
 66,2,55,HighSchool,5,22000,52,no,54,1
-55,4,46,School,9,17000,44,no,47,0
-78,1,60,BSc,2,33000,58,yes,62,1
-83,3,75,University,1,45000,72,no,78,1
-61,1,40,Bachelor,7,19000,39,no,42,0
-86,2,70,School,4,26000,68,yes,72,1
-79,3,66,BSc,3,30000,64,no,68,1
-53,2,38,NoEdu,8,14000,36,no,37,0
-81,1,57,Bachelor,2,31000,55,no,59,1
-90,3,85,University,1,55000,82,yes,88,1
-62,?,53,School,6,22000,51,no,55,1
-47,6,38,NoEdu,12,13000,35,no,36,0
-87,1,71,BSc,1,36000,70,yes,73,1
-52,4,44,HighSchool,9,18000,42,no,45,0
-98,0,99,University,0,80000,95,no,100,1
