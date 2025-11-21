@@ -6,6 +6,27 @@ Repository reorganized into a clearer structure.
 
 This project develops machine learning models to predict student academic performance using a realistically messy educational dataset. It includes a complete data-cleaning pipeline, feature engineering for both numeric and categorical variables, and implementations of classification and regression models to predict pass/fail outcomes and final exam scores.
 
+<!-- Badges -->
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
+## TL;DR
+
+- Built reproducible data cleaning and modeling pipeline for student outcome prediction.
+- Models: Logistic Regression (classification), Linear Regression and Random Forest (regression).
+- Results (on included dataset): Linear Regression gave very strong fit (MAE ~1.36, R² ~0.995). See Results section for exact outputs.
+
+## Table of Contents
+
+- [Overview](#1-overview)
+- [Dataset](#2-dataset-description)
+- [Preprocessing](#3-data-cleaning--preprocessing)
+- [Models & Results](#4-model-training--evaluation)
+- [Feature Importance & Visuals](#5-feature-importance-analysis)
+- [How to Run](#6-how-to-run-this-project)
+- [Project Structure](#7-project-structure)
+- [Author & License](#author--license)
+
 ## 1. Overview
 
 - Dataset: synthetic but realistic students dataset with 150+ records and 10 columns.
@@ -56,13 +77,26 @@ Data issues addressed:
 
 Two models were trained and compared:
 - Linear Regression
-  - MAE: ~1.76
-  - R²: ~0.991
+  - MAE: ~1.36 (observed run in this repo)
+  - R²: ~0.995 (observed run in this repo)
 - Random Forest Regressor
   - MAE: ~2.84
   - R²: ~0.966
 
 Interpretation: Linear Regression performed best on this dataset (strong linear signals). Random Forest captured non-linear patterns but gave slightly lower accuracy here.
+
+### 4.4 Exact outputs (example runs)
+These are outputs captured when running the scripts in this repository (venv python):
+
+From `models/student_regression_linear.py` (venv run):
+```
+MAE (Mean Absolute Error): 1.356935907161344
+R2 Score: 0.9949555367968778
+Predicted Final Score: [75.53108392]
+```
+
+From `analysis/rf_feature_plot.py`: saved plot to `images/feature_importance.png` (generated locally).
+
 
 ### 4.3 Model Comparison Summary
 Task — Best Model — Reason
@@ -93,6 +127,8 @@ Interpretation: `Marks` dominates tree-based importance; `PreviousScore` is also
 5.3 Feature Importance Plot
 - Generated via `analysis/rf_feature_plot.py` and saved to `images/feature_importance.png`.
 
+![Feature Importance](images/feature_importance.png)
+
 ## 6. How to Run This Project
 
 1. Clone the repository
@@ -113,10 +149,10 @@ pip install -r requirements.txt
 3. Run model scripts (examples)
 
 ```powershell
-python models\\student_model.py
-python models\\student_regression_linear.py
-python models\\student_regression_rf.py
-python analysis\\rf_feature_plot.py
+python models\student_model.py
+python models\student_regression_linear.py
+python models\student_regression_rf.py
+python analysis\rf_feature_plot.py
 ```
 
 > Note: The scripts read the dataset from `data/students.csv`.
@@ -160,3 +196,4 @@ If you want, I can also:
 - Run one of the model scripts and paste the output here.
 - Commit and push this README update (I can do that for you).
 - Convert the scripts into importable functions and add a small CLI or notebook.
+
